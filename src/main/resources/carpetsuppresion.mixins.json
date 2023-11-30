@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "igna778.carpetsuppresion.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SyncUpdateFixesMixin",
+    "ServerWorldAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

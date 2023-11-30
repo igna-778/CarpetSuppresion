@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "carpetsuppresion",
+  "version": "${version}",
+  "name": "CarpetSuppresion",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Ignacio/CarpetSuppresion"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/carpetsuppresion/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "igna778.carpetsuppresion.client.CarpetSuppresionClient"
+    ],
+    "main": [
+      "igna778.carpetsuppresion.CarpetSuppresion"
+    ]
+  },
+  "mixins": [
+    "carpetsuppresion.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

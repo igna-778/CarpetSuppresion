@@ -1,5 +1,8 @@
 {
   "mappings": {
+    "igna778/carpetsuppresion/mixins/EntityTick": {
+      "forEach": "Lnet/minecraft/class_5574;method_31791(Ljava/util/function/Consumer;)V"
+    },
     "igna778/carpetsuppresion/mixins/ServerEntityManagerAccesor": {
       "entityUuids": "field_27261:Ljava/util/Set;"
     },
@@ -10,6 +13,9 @@
   },
   "data": {
     "named:intermediary": {
+      "igna778/carpetsuppresion/mixins/EntityTick": {
+        "forEach": "Lnet/minecraft/class_5574;method_31791(Ljava/util/function/Consumer;)V"
+      },
       "igna778/carpetsuppresion/mixins/ServerEntityManagerAccesor": {
         "entityUuids": "field_27261:Ljava/util/Set;"
       },

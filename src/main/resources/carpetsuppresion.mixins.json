@@ -4,6 +4,7 @@
   "package": "igna778.carpetsuppresion.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EntityTick",
     "ServerEntityManagerAccesor",
     "ServerWorldAccessor",
     "SyncUpdateFixesMixin"

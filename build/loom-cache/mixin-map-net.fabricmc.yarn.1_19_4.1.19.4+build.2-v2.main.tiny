@@ -1,6 +1,0 @@
-v1	named	intermediary
-FIELD	igna778/carpetsuppresion/mixins/SyncUpdateFixesMixin	Ljava/util/List;	blockEventQueue	field_35565
-FIELD	igna778/carpetsuppresion/mixins/SyncUpdateFixesMixin	Lit/unimi/dsi/fastutil/objects/ObjectLinkedOpenHashSet;	syncedBlockEventQueue	field_13950
-FIELD	igna778/carpetsuppresion/mixins/SyncUpdateFixesMixin	Lnet/minecraft/server/MinecraftServer;	server	field_13959
-METHOD	igna778/carpetsuppresion/mixins/SyncUpdateFixesMixin	(Lnet/minecraft/server/world/BlockEvent;)Z	processBlockEvent	method_14174
-METHOD	igna778/carpetsuppresion/mixins/SyncUpdateFixesMixin	()V	processSyncedBlockEvents	method_14192

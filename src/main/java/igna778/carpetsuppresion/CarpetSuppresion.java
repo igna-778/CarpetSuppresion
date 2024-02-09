@@ -4,6 +4,7 @@ import carpet.CarpetExtension;
 import carpet.CarpetServer;
 import carpet.logging.HUDController;
 import carpet.logging.LoggerRegistry;
+import igna778.carpetsuppresion.mixins.ServerEntityManagerAccesor;
 import igna778.carpetsuppresion.mixins.ServerWorldAccessor;
 import igna778.carpetsuppresion.utils.CSSettings;
 import net.fabricmc.api.ModInitializer;
@@ -16,6 +17,7 @@ import java.util.List;
 
 public class CarpetSuppresion implements ModInitializer, CarpetExtension {
     public static boolean __blockEvents;
+    public static boolean __EntityUUID;
     @SuppressWarnings("DataFlowIssue")
     @Override
     public void onInitialize() {
@@ -31,6 +33,18 @@ public class CarpetSuppresion implements ModInitializer, CarpetExtension {
             }
             int finalTotal = total;
             LoggerRegistry.getLogger("blockEventQueue").log(option -> mapOptions(option, finalTotal, ow, ne, end));
+        });
+        HUDController.register(server -> {
+            if (!CarpetSuppresion.__EntityUUID) return;
+            int total = 0;
+            int ow = ((ServerEntityManagerAccesor) ((ServerWorldAccessor) server.getWorld(World.OVERWORLD)).getEntityManager()).getEntityUuids().size();
+            int ne = ((ServerEntityManagerAccesor) ((ServerWorldAccessor) server.getWorld(World.NETHER)).getEntityManager()).getEntityUuids().size();
+            int end = ((ServerEntityManagerAccesor) ((ServerWorldAccessor) server.getWorld(World.END)).getEntityManager()).getEntityUuids().size();
+            for (ServerWorld world : server.getWorlds()) {
+                total += ((ServerEntityManagerAccesor) ((ServerWorldAccessor) world).getEntityManager()).getEntityUuids().size();
+            }
+            int finalTotal = total;
+            LoggerRegistry.getLogger("EntityUUID").log(option -> mapOptions(option, finalTotal, ow, ne, end));
         });
     }
 
@@ -51,6 +65,7 @@ public class CarpetSuppresion implements ModInitializer, CarpetExtension {
     @Override
     public void registerLoggers() {
         LoggerRegistry.registerLogger("blockEventQueue", BlockEventQueueLogger.create());
+        LoggerRegistry.registerLogger("EntityUUID", EntityUuidLogger.create());
     }
 
 }

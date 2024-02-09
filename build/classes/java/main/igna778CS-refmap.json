@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "igna778/carpetsuppresion/mixins/ServerEntityManagerAccesor": {
+      "entityUuids": "field_27261:Ljava/util/Set;"
+    },
+    "igna778/carpetsuppresion/mixins/ServerWorldAccessor": {
+      "entityManager": "field_26935:Lnet/minecraft/class_5579;",
+      "syncedBlockEventQueue": "field_13950:Lit/unimi/dsi/fastutil/objects/ObjectLinkedOpenHashSet;"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "igna778/carpetsuppresion/mixins/ServerEntityManagerAccesor": {
+        "entityUuids": "field_27261:Ljava/util/Set;"
+      },
+      "igna778/carpetsuppresion/mixins/ServerWorldAccessor": {
+        "entityManager": "field_26935:Lnet/minecraft/class_5579;",
+        "syncedBlockEventQueue": "field_13950:Lit/unimi/dsi/fastutil/objects/ObjectLinkedOpenHashSet;"
+      }
+    }
+  }
+}
